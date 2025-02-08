@@ -2074,54 +2074,64 @@ namespace Mega_Monsters_Party
             
             public void checkGameStatus()
             {
-                if (playerOnFinish)
+                if(!playerIsDead)
                 {
-                    Thread.Sleep(700);
-                    Console.WriteLine("\n\nКонец игры");
-                    Console.Write($"\nПобедил: {playerName}");
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Environment.Exit(0);
+                    if (playerOnFinish)
+                    {
+                        Thread.Sleep(700);
+                        Console.WriteLine("\n\nКонец игры");
+                        Console.Write($"\nПобедил: {playerName}");
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Environment.Exit(0);
+                    }
                 }
-                if (bot1OnFinish)
+                if (!bot1IsDead)
                 {
-                    Thread.Sleep(700);
-                    Console.WriteLine("\n\nКонец игры");
-                    Console.Write($"\nПобедил: {bot1Name}");
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Environment.Exit(0);
+                    if (bot1OnFinish)
+                    {
+                        Thread.Sleep(700);
+                        Console.WriteLine("\n\nКонец игры");
+                        Console.Write($"\nПобедил: {bot1Name}");
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Environment.Exit(0);
+                    }
                 }
-                if (bot2OnFinish)
+                if (!bot2IsDead)
                 {
-                    Thread.Sleep(700);
-                    Console.WriteLine("\n\nКонец игры");
-                    Console.Write($"\nПобедил: {bot2Name}");
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Thread.Sleep(320);
-                    Console.Write(".");
-                    Environment.Exit(0);
+                    if (bot2OnFinish)
+                    {
+                        Thread.Sleep(700);
+                        Console.WriteLine("\n\nКонец игры");
+                        Console.Write($"\nПобедил: {bot2Name}");
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Thread.Sleep(320);
+                        Console.Write(".");
+                        Environment.Exit(0);
+                    }
                 }
+
                 if (playerIsDead && bot1IsDead && !bot2IsDead)
                 {
                     Thread.Sleep(700);
@@ -2172,29 +2182,6 @@ namespace Mega_Monsters_Party
                 }
             }
         }
-
-        //class timer
-        //{
-        //    public static int seconds;
-        //    public static int minutes;
-        //    public void tick()
-        //    {
-        //        while (true)
-        //        {
-        //            Thread.Sleep(1000);
-        //            seconds++;
-        //        }
-        //    }
-
-        //    public static object timeInTheGame()
-        //    {
-        //        minutes = seconds / 60;
-        //        string min = Convert.ToString(minutes); 
-        //        string sec = Convert.ToString(seconds);
-        //        object timeInGame = $"{min}:{sec}";
-        //        return timeInGame;
-        //    }
-        //}
 
         static void Main(string[] args)
         {
